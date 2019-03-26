@@ -5,7 +5,7 @@
  * @property Ion_auth|Ion_auth_model $ion_auth        The ION Auth spark
  * @property CI_Form_validation      $form_validation The form validation library
  */
-class Auth extends CI_Controller
+class Auth extends MY_Controller
 {
 	public $data = [];
 
@@ -101,6 +101,8 @@ class Auth extends CI_Controller
 				'name' => 'identity',
 				'id' => 'identity',
 				'type' => 'text',
+				'class' => 'form-control',
+				'placeholder' => 'Matrícula o DNI',
 				'value' => $this->form_validation->set_value('identity'),
 			];
 
@@ -108,6 +110,8 @@ class Auth extends CI_Controller
 				'name' => 'password',
 				'id' => 'password',
 				'type' => 'password',
+				'class' => 'form-control',
+				'placeholder' => 'Contraseña'
 			];
 
 			$this->_render_page('auth' . DIRECTORY_SEPARATOR . 'login', $this->data);
@@ -877,7 +881,8 @@ class Auth extends CI_Controller
 
 		$viewdata = (empty($data)) ? $this->data : $data;
 
-		$view_html = $this->load->view($view, $viewdata, $returnhtml);
+		$this->set_var($viewdata);
+		$view_html = $this->view($view, $returnhtml)->render();;
 
 		// This will return html on 3rd argument being true
 		if ($returnhtml)

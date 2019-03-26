@@ -25,10 +25,10 @@ $lang['error_csrf'] = 'Este formulario no pasó nuestras pruebas de seguridad.';
 
 // Login
 $lang['login_heading']         = 'Ingresar';
-$lang['login_subheading']      = 'Por favor, introduce tu email/usuario y contraseña.';
-$lang['login_identity_label']  = 'Email/Usuario:';
+$lang['login_subheading']      = 'Por favor, introduce tu DNI/Matricula y contraseña.';
+$lang['login_identity_label']  = 'Usuario:';
 $lang['login_password_label']  = 'Contraseña:';
-$lang['login_remember_label']  = 'Recuérdame:';
+$lang['login_remember_label']  = 'Recordar sesión';
 $lang['login_submit_btn']      = 'Ingresar';
 $lang['login_forgot_password'] = '¿Has olvidado tu contraseña?';
 
@@ -38,13 +38,13 @@ $lang['index_subheading']        = 'Debajo está la lista de usuarios.';
 $lang['index_fname_th']          = 'Nombre';
 $lang['index_lname_th']          = 'Apellidos';
 $lang['index_email_th']          = 'Email';
-$lang['index_groups_th']         = 'Grupos';
+$lang['index_groups_th']         = 'Roles del Usuario';
 $lang['index_status_th']         = 'Estado';
 $lang['index_action_th']         = 'Acción';
 $lang['index_active_link']       = 'Activo';
 $lang['index_inactive_link']     = 'Inactivo';
 $lang['index_create_user_link']  = 'Crear nuevo usuario';
-$lang['index_create_group_link'] = 'Crear nuevo grupo';
+$lang['index_create_group_link'] = 'Crear nuevo Rol de Usuario';
 
 // Deactivate User
 $lang['deactivate_heading']                  = 'Desactivar usuario';
@@ -57,7 +57,7 @@ $lang['deactivate_validation_user_id_label'] = 'ID de usuario';
 
 // Create User
 $lang['create_user_heading']                           = 'Crear Usuario';
-$lang['create_user_subheading']                        = 'Por favor, introduzce la información del usuario.';
+$lang['create_user_subheading']                        = 'Por favor, introduce la información del usuario.';
 $lang['create_user_fname_label']                       = 'Nombre:';
 $lang['create_user_lname_label']                       = 'Apellidos:';
 $lang['create_user_identity_label']                    = 'Identity:';
@@ -86,36 +86,36 @@ $lang['edit_user_email_label']                       = 'Email:';
 $lang['edit_user_phone_label']                       = 'Teléfono:';
 $lang['edit_user_password_label']                    = 'Contraseña: (si quieres cambiarla)';
 $lang['edit_user_password_confirm_label']            = 'Confirmar contraseña: (si quieres cambiarla)';
-$lang['edit_user_groups_heading']                    = 'Miembro de grupos';
+$lang['edit_user_groups_heading']                    = 'Roles del usuario:';
 $lang['edit_user_submit_btn']                        = 'Guardar Usuario';
 $lang['edit_user_validation_fname_label']            = 'Nombre';
 $lang['edit_user_validation_lname_label']            = 'Apellidos';
 $lang['edit_user_validation_email_label']            = 'Correo electrónico';
 $lang['edit_user_validation_phone_label']            = 'Teléfono';
 $lang['edit_user_validation_company_label']          = 'Compañía';
-$lang['edit_user_validation_groups_label']           = 'Grupos';
+$lang['edit_user_validation_groups_label']           = 'Rol de Usuarios';
 $lang['edit_user_validation_password_label']         = 'Contraseña';
 $lang['edit_user_validation_password_confirm_label'] = 'Confirmación de contraseña';
 
 // Create Group
-$lang['create_group_title']                  = 'Crear Grupo';
-$lang['create_group_heading']                = 'Crear Grupo';
-$lang['create_group_subheading']             = 'Por favor introduce la información del grupo.';
-$lang['create_group_name_label']             = 'Nombre de Grupo:';
+$lang['create_group_title']                  = 'Crear Rol de Usuario';
+$lang['create_group_heading']                = 'Crear Rol de Usuario';
+$lang['create_group_subheading']             = 'Por favor introduce la información del Rol de Usuario.';
+$lang['create_group_name_label']             = 'Nombre de Rol de Usuario:';
 $lang['create_group_desc_label']             = 'Descripción:';
-$lang['create_group_submit_btn']             = 'Crear Grupo';
-$lang['create_group_validation_name_label']  = 'Nombre de Grupo';
+$lang['create_group_submit_btn']             = 'Crear Rol de Usuario';
+$lang['create_group_validation_name_label']  = 'Nombre de Rol de Usuario';
 $lang['create_group_validation_desc_label']  = 'Descripcion';
 
 // Edit Group
-$lang['edit_group_title']                  = 'Editar Grupo';
-$lang['edit_group_saved']                  = 'Grupo Guardado';
-$lang['edit_group_heading']                = 'Editar Grupo';
-$lang['edit_group_subheading']             = 'Por favor, registra la informacion del grupo.';
-$lang['edit_group_name_label']             = 'Nombre de Grupo:';
+$lang['edit_group_title']                  = 'Editar Rol de Usuario';
+$lang['edit_group_saved']                  = 'Rol de Usuario Guardado';
+$lang['edit_group_heading']                = 'Editar Rol de Usuario';
+$lang['edit_group_subheading']             = 'Por favor, registra la informacion del Rol de Usuario.';
+$lang['edit_group_name_label']             = 'Nombre de Rol de Usuario:';
 $lang['edit_group_desc_label']             = 'Descripción:';
-$lang['edit_group_submit_btn']             = 'Guardar Grupo';
-$lang['edit_group_validation_name_label']  = 'Nombre de Grupo';
+$lang['edit_group_submit_btn']             = 'Guardar Rol de Usuario';
+$lang['edit_group_validation_name_label']  = 'Nombre de Rol de Usuario';
 $lang['edit_group_validation_desc_label']  = 'Descripción';
 
 // Change Password
