@@ -8,6 +8,7 @@
 class Auth extends MY_Controller
 {
 	public $data = [];
+	public $i = 0;
 
 	public function __construct()
 	{
@@ -15,6 +16,34 @@ class Auth extends MY_Controller
 		$this->load->database();
 		$this->load->library(['ion_auth', 'form_validation']);
 		$this->load->helper(['url', 'language']);
+
+		$this->data['menu'] = [
+			[
+				"nombre"=>"Revisores",
+				"icono"=>"fa-vcard",
+				"ruta"=>site_url('auth'),
+				"active"=>FALSE
+			],
+			[
+				"nombre"=>"Protocolos subidos",
+				"icono"=>"fa-book",
+				"ruta"=>site_url('auth/protocolos_subidos'),
+				"active"=>FALSE
+			],
+			[
+				"nombre"=>"Editar protocolos",
+				"icono"=>"fa-edit",
+				"ruta"=>site_url('auth/protocolos'),
+				"active"=>FALSE
+			],
+			[
+				"nombre"=>"Estadisticas",
+				"icono"=>"fa-bar-chart-o",
+				"ruta"=>site_url('auth/estadisticas'),
+				"active"=>FALSE
+			]
+		];
+		
 
 		$this->form_validation->set_error_delimiters($this->config->item('error_start_delimiter', 'ion_auth'), $this->config->item('error_end_delimiter', 'ion_auth'));
 
@@ -54,6 +83,8 @@ class Auth extends MY_Controller
 			{
 				$this->data['users'][$k]->groups = $this->ion_auth->get_users_groups($user->id)->result();
 			}
+
+			$this->data['menu'][0]['active'] = TRUE;
 
 			$this->_render_page('auth' . DIRECTORY_SEPARATOR . 'index', $this->data);
 		}
@@ -114,6 +145,7 @@ class Auth extends MY_Controller
 				'placeholder' => 'Contraseña'
 			];
 
+			$this->layout('login');
 			$this->_render_page('auth' . DIRECTORY_SEPARATOR . 'login', $this->data);
 		}
 	}
@@ -882,7 +914,7 @@ class Auth extends MY_Controller
 		$viewdata = (empty($data)) ? $this->data : $data;
 
 		$this->set_var($viewdata);
-		$view_html = $this->view($view, $returnhtml)->render();;
+		$view_html = $this->view($view)->render();;
 
 		// This will return html on 3rd argument being true
 		if ($returnhtml)

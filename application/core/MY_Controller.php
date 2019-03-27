@@ -232,7 +232,7 @@ class MY_Controller extends Middleware_Controller {
         $data['view_content'] =  $this->load->view($view, $data, true);
 
         // Build our notices from the theme's view file.
-        $data['notice'] = $this->load->view('theme/notice', array('notice' => $this->message()), true);
+        //$data['notice'] = $this->load->view('theme/notice', array('notice' => $this->message()), true);
 
         // Render our layout and we're done!
         $layout = !empty($this->use_layout) ? $this->use_layout : 'index';

@@ -6,12 +6,6 @@
     <div id="notices"></div>
 <?php endif; ?>
 
-<section id="main-content">
-    <div class="row">
-        <div class="twelve columns">
-            <?= $view_content ?>
-        </div>
-    </div>
-</section>
+<?= $view_content ?>
 
 <?php $this->load->view('theme/footer'); ?>
