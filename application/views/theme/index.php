@@ -5,7 +5,12 @@
 <?php else : ?>
     <div id="notices"></div>
 <?php endif; ?>
-
-<?= $view_content ?>
+<div class="row">
+	<div class="col-lg-12 col-md-12">
+		<div class="ibox ">
+			<?= $view_content ?>
+		</div>
+	</div>
+</div>
 
 <?php $this->load->view('theme/footer'); ?>
